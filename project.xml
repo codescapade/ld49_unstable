@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <meta title="Ludum Dare 49" package="com.spirit.ld49" version="1.0.0" company="Codescapade" />
+  <app main="Main" path="build" file="LD49" />
+  <window width="800" height="600" resizable="false" background="#000000" vsync="true"/>
+  <window fps="60" unless="html5"/>
+  <source path="src" />
+
+  <assets path="assets"/>
+  <haxelib name="lime" />
+  <haxelib name="spirit" />
+  <haxelib name="nape-haxe4" />
+</project>
