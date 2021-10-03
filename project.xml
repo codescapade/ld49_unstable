@@ -10,4 +10,6 @@
   <haxelib name="lime" />
   <haxelib name="spirit" />
   <haxelib name="nape-haxe4" />
+  
+  <haxedef name="NAPE_RELEASE_BUILD" unless="debug" />
 </project>
