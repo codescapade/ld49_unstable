@@ -61,7 +61,7 @@ class GameScene extends Scene {
     addSystem(UpdateSystem).init();
     addSystem(RenderSystem).init();
 
-    var font = assets.addBitmapFont('testFont', 'assets/fonts/test2.png', 'assets/fonts/test.fnt');
+    var font = assets.addBitmapFont('testFont', 'assets/fonts/test.png', 'assets/fonts/test.fnt');
     boxImage = assets.getImage('assets/test.png');
     sheet = assets.addSpriteSheet('sheet', 'assets/sprites.png', 'assets/sprites.json');
 

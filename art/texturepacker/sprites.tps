@@ -197,6 +197,7 @@
                 <false/>
             </struct>
             <key type="filename">../sprites/eye_closed.png</key>
+            <key type="filename">../sprites/eye_lid.png</key>
             <key type="filename">../sprites/eye_look.png</key>
             <key type="filename">../sprites/eye_middle.png</key>
             <struct type="IndividualSpriteSettings">
@@ -210,21 +211,6 @@
                 <rect>7,7,13,13</rect>
                 <key>scale9Paddings</key>
                 <rect>7,7,13,13</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/eye_lid.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>7,6,13,13</rect>
-                <key>scale9Paddings</key>
-                <rect>7,6,13,13</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -263,11 +249,11 @@
         <array>
             <filename>../sprites/block.png</filename>
             <filename>../sprites/eye_closed.png</filename>
-            <filename>../sprites/eye_lid.png</filename>
             <filename>../sprites/eye_look.png</filename>
             <filename>../sprites/eye_middle.png</filename>
             <filename>../sprites/mouth_closed.png</filename>
             <filename>../sprites/mouth_open.png</filename>
+            <filename>../sprites/eye_lid.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
