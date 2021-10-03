@@ -1,13 +1,13 @@
 package components;
 
 import spirit.components.Sprite;
-import spirit.graphics.Color;
-import spirit.components.BoxShape;
 import spirit.components.NapeBody;
 import spirit.core.Updatable;
 import spirit.core.Component;
 
 class Sleeping extends Component implements Updatable {
+
+  public var awake(default, null) = false;
 
   var body: NapeBody;
 
@@ -31,8 +31,6 @@ class Sleeping extends Component implements Updatable {
 
   var mouth: Sprite;
 
-  var awake: Bool;
-
   public function init(options: SleepingOptions) {
     body = getComponent(NapeBody);
 
@@ -48,13 +46,17 @@ class Sleeping extends Component implements Updatable {
       timeStill = 0;
       timeAwake += dt;
       if (!awake && timeAwake < timeBeforeFullAwake) {
+        leftEye.active = true;
         leftLid.active = true;
         leftLid.setFrame('eye_lid');
+        rightEye.active = true;
         rightLid.active = true;
         rightLid.setFrame('eye_lid');
       } else {
         awake = true;
+        leftEye.active = true;
         leftLid.active = false;
+        rightEye.active = true;
         rightLid.active = false;
         mouth.setFrame('mouth_open');
       }
@@ -64,23 +66,38 @@ class Sleeping extends Component implements Updatable {
       if (awake) {
         if (timeStill > timeBeforesleep) {
           awake = false;
+          leftEye.active = false;
           leftLid.active = true;
           leftLid.setFrame('eye_closed');
+          rightEye.active = false;
           rightLid.active = true;
           rightLid.setFrame('eye_closed');
           mouth.setFrame('mouth_closed');
         } else if (timeStill > timeBeforeAlmostSleep) {
+          leftEye.active = true;
           leftLid.active = true;
           leftLid.setFrame('eye_lid');
+          rightEye.active = true;
           rightLid.active = true;
           rightLid.setFrame('eye_lid');
         }
       } else {
-        leftLid.active = true;
-        leftLid.setFrame('eye_closed');
-        rightLid.active = true;
-        rightLid.setFrame('eye_closed');
-        mouth.setFrame('mouth_closed');
+        if (timeStill < timeBeforeAlmostSleep) {
+          leftEye.active = true;
+          leftLid.active = true;
+          leftLid.setFrame('eye_lid');
+          rightEye.active = true;
+          rightLid.active = true;
+          rightLid.setFrame('eye_lid');
+        } else {
+          leftEye.active = false;
+          leftLid.active = true;
+          leftLid.setFrame('eye_closed');
+          rightEye.active =false;
+          rightLid.active = true;
+          rightLid.setFrame('eye_closed');
+          mouth.setFrame('mouth_closed');
+        }
       }
     }
   }

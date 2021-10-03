@@ -22,7 +22,7 @@
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":15},
-	"sourceSize": {"w":26,"h":25}
+	"sourceSize": {"w":26,"h":26}
 },
 {
 	"filename": "eye_look",
@@ -63,6 +63,6 @@
 	"format": "RGBA8888",
 	"size": {"w":118,"h":62},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:5d3e7b911eaef0e4f01150c5b5f9f715:e05b67ec22416e0cc1a63e34e3dfa769:1eabdf11f75e3a4fe3147baf7b5be24b$"
+	"smartupdate": "$TexturePacker:SmartUpdate:21706f64ff78c42f16c09fdb3e431319:12021d6b1c13d8f68f1598ae390c7106:1eabdf11f75e3a4fe3147baf7b5be24b$"
 }
 }
